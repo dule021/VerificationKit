@@ -14,6 +14,7 @@ Inside the `user-verify-sdk`
 4. `yarn link`
 
 Inside the `drone-rental-app` 
+
 5. `yarn install` 
 6. `yarn link user-verify-sdk` 
 7. `yarn dev` to start the demo app which consumes the SDK

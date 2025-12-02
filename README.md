@@ -13,7 +13,10 @@ Inside the `user-verify-sdk`
 3. `yarn dev` to test the SDK in isolation on a local server
 4. `yarn link`
 
-Inside the `drone-rental-app` 5. `yarn install` 6. `yarn link user-verify-sdk` 7. `yarn dev`to start the demo app which consumes the SDK
+Inside the `drone-rental-app` 
+5. `yarn install` 
+6. `yarn link user-verify-sdk` 
+7. `yarn dev` to start the demo app which consumes the SDK
 
 # How it works
 

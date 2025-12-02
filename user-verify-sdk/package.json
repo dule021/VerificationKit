@@ -1,0 +1,43 @@
+{
+  "name": "user-verify-sdk",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:ts": "tsc --project tsconfig.build.json",
+    "build": "vite build && yarn build:ts",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "preact": "^10.27.2",
+    "preact-custom-element": "^4.6.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.48.0",
+    "@typescript-eslint/parser": "^8.48.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-preact": "^0.1.0",
+    "prettier": "^3.7.3",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4"
+  },
+  "files": ["dist"],
+  "main": "./dist/user-verify-sdk.umd.js",
+  "module": "./dist/user-verify-sdk.es.js",
+  "types": "./dist/user-verify-sdk.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/user-verify-sdk.d.ts",
+      "import": "./dist/user-verify-sdk.es.js",
+      "require": "./dist/user-verify-sdk.umd.js"
+    }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+  width: 100%;
+}
+
+#root {
+  margin: 0 auto;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.3);
+  width: 100%;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+nav button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+h1,
+h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #0f766e;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.drones-grid {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(249, 115, 22, 0.15);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+.drone-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  width: 100%;
+  max-width: 350px;
+}
+.drone-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(249, 115, 22, 0.3);
+}
+
+.drone-image {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  position: relative;
+}
+.drone-image span {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.drone-card h3 {
+  color: #0f766e;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+.drone-card button {
+  background: linear-gradient(135deg, #0f766e 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(15, 118, 110, 0.4);
+  margin-top: 1rem;
+}
+.drone-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(15, 118, 110, 0.5);
+}
+
+.about {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(15, 118, 110, 0.1);
+}
+.about-images {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+.about-image {
+  width: 320px;
+  height: 220px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+}
+
+.about-image span {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  font-size: 2rem;
+}
+
+.contact {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(254, 242, 224, 0.9) 100%
+  );
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(249, 115, 22, 0.1);
+}
+.contact-info p {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: #0f766e;
+  font-weight: 500;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+}
+.modal {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  width: 650px;
+  box-shadow: 0 30px 100px rgba(249, 115, 22, 0.4);
+}
+.close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #f97316;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .close {
+  z-index: 1;
+  padding: 0;
+}
+
+.modal-drone-image {
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  position: relative;
+}
+.modal-drone-image span {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.modal-header {
+  text-align: center;
+  margin: 0.5rem;
+}
+.modal-header h2 {
+  margin-bottom: 0.5rem;
+  color: #0f766e;
+}
+.price {
+  color: #f97316;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+.modal-section {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+}
+.modal-section h4 {
+  color: #f97316;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+.modal-section p {
+  line-height: 1.5;
+  color: #374151;
+}
+.rent-button {
+  width: 100%;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  color: white;
+  border: none;
+  padding: 1.25rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 40px rgba(249, 115, 22, 0.5);
+  margin-top: 0.5rem;
+}
+.rent-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 50px rgba(249, 115, 22, 0.6);
+}
+
+.micro-app-placeholder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, white 0%, #fef3c7 100%);
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 30px 100px rgba(249, 115, 22, 0.4);
+  z-index: 30;
+  text-align: center;
+  width: 80vw;
+  display: flex;
+}
+
+.micro-app-placeholder button {
+  background: #0f766e;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+
+.micro-app-placeholder .checkout-button {
+  position: static;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+}
